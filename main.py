@@ -1,5 +1,7 @@
 #This code should be able to solve the problem in "Instructions.pdf"
 #When you run it, enter the sample problem one line at a time and hit enter in between each line. You should get the right output.
+#input= 4, +++===!!!!, 777777.......TTTTTTTTTTTT, (AABBC), 3.1415555
+#output= 3 + 3 = 4 ! , 6 7 6 . 12 T , 1 ( 2 A 2 B 1 C 1 ) , 1 3 1 . 1 1 1 4 1 1 4 5
 
 #read in how many lines there are
 lines = int(input())
