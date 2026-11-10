@@ -1,17 +1,16 @@
+#This code should be able to solve the problem in "Instructions.pdf"V
 #This code should be able to solve the problem in "Instructions.pdf"
 #When you run it, enter the sample problem one line at a time and hit enter in between each line. You should get the right output.
-#input= 4, +++===!!!!, 777777.......TTTTTTTTTTTT, (AABBC), 3.1415555
-#output= 3 + 3 = 4 ! , 6 7 6 . 12 T , 1 ( 2 A 2 B 1 C 1 ) , 1 3 1 . 1 1 1 4 1 1 4 5
-
+#sample input= 4 , +++===!!!! , 777777......TTTTTTTTTTTT , (AABBC) , 3.1415555
+#output should be = 3 + 3 = 4 ! , 6 7 6 . 12 T , 1 ( 2 A 2 B 1 C 1 ) , 1 3 1 . 1 1 1 4 1 1 4 5
 #read in how many lines there are
 lines = int(input())
 #setup output variable
 output=""
 #loop through the lines
 for i in range(0,lines):
-    currentLine=input()
     #read in a line
-
+    currentLine=input()
     #set the current char variable and give it a dummy value
     currentChar='a'
     #set the current count to 0
@@ -19,34 +18,33 @@ for i in range(0,lines):
     #set the previous count variable and give it a dummy value
     previousChar=''
     #loop through the characters in the line
-    for j in range(1,len(currentLine)):
-            #if it's your first line,
+    for j in range(0,len(currentLine)):
+        #if it's your first line,
         if j==0:
-                #set the current char to the current letter
-            currentChar[a]==currentLine[j]
-                #set the count to 1
-            currentCount=3
+            #set the current char to the current letter
+            currentChar=currentLine[j]
+            #set the count to 1
+            currentCount=1
         else:
-                #set previous to current char
+            #set previous to current char
             previousChar=currentChar
-                #get the new current char from position j
-            currentChar=currentLine(j)
-                #if current and previous are the same
+            #get the new current char from position j
+            currentChar=currentLine[j]
+            #if current and previous are the same
             if currentChar==previousChar:
-                currentCount=1
-                    #increase the count
-                #if they aren't the same
+                #increase the count
+                currentCount+=1
+            #if they aren't the same
             else:
-                    #add the count of the last letter to the output
-                    output+=str(currentCount)+" "+str(previousChar)+" "
-                    #set the count back to 1
-                    currentCount=1
-                #If we're on the last character
-        if j == len(1, currentLine):
-            #add the character count to the output
-            output+str(currentCount)+" "+str(previousChar)+" "
-        #add a newline to the output
-    output+="/n"
+                #add the count of the last letter to the output
+                output+=str(currentCount)+" "+str(previousChar)+" "
+                #set the count back to 1
+                currentCount=1
+            #If we're on the last character
+    if j==len(currentLine)-1:
+                #add the character count to the output
+        output+=str(currentCount)+" "+str(previousChar)+" "
+    #add a newline to the output
+    output+="\n"
 #print the result
-print(output)
-
+print (output)
